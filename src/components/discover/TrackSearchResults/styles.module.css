@@ -1,0 +1,32 @@
+.trackList {
+    display: grid; 
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, auto);
+    gap: 2rem;
+    max-width: 100%;
+    /* justify-content: space-between; */
+
+    & li {
+        max-width: 100%;
+    }
+}
+
+@media (width <= 1024px) {
+    .trackList {
+        grid-template-columns: repeat(3, auto);
+    }
+    
+}
+
+@media (width <= 768px) {
+    .trackList {
+        grid-template-columns: repeat(2, auto);
+    }
+    
+}
+
+@media (width <= 481px) {
+    .trackList {
+        grid-template-columns: repeat(1, auto);
+    }
+}

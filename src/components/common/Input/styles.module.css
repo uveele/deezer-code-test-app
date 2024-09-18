@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    position: relative;
+    border: 1px solid #0000001A;
+    background: transparent;
+    border-radius: 8px;
+    padding: .38rem 1.31rem;
+    height: 2.94rem;
+    align-items: center;
+    gap: 1.31rem;
+    
+    & img {
+        width: 1.19rem;
+        height: 1.19rem;
+    }
+    
+    & input {
+        flex-grow: 1;
+        outline: 2px solid transparent;
+
+        &::placeholder {
+            color: #00000099;
+            opacity: 1; /* Firefox */
+        }
+        
+        &::-ms-input-placeholder { /* Edge 12 -18 */
+            color: #00000099;
+        }
+
+    }
+    
+}

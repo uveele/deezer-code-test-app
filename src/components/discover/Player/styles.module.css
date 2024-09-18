@@ -1,0 +1,90 @@
+.playerContainer {
+    background: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px -6px 25px #0000000D;
+    transition: 0.5s;
+    z-index: 10;
+
+    &.playerVisible {
+        transform: translateY(0);
+    }
+
+    &.playerHidden {
+        transform: translateY(100%);
+    }
+
+    & .player {
+        width: 1440px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.25rem 3rem;
+        gap: 3.13rem;
+
+        & .playerInfo {
+            display: flex;
+            gap: 1.5rem;
+            width: 18.75rem;
+            min-width: 18.75rem;
+            
+            & img {
+                align-self: flex-center; 
+                width: 5rem;
+                border-radius: 4px;
+            }
+
+            & div {
+                display: flex;
+                flex-direction: column;
+                gap: .25rem;
+                justify-content: center;
+
+                & span:nth-child(1) {
+                    font-weight: 600;
+                    line-height: 1.63rem;
+                    font-size: 1.25rem;
+                }
+
+                & span:nth-child(2) {
+                    line-height: 1.46rem;
+                    font-size: 1.13rem;
+                }
+
+            }
+
+        }
+        
+        & .playerVolume {
+            width: 18.75rem;
+        }
+    }
+
+}
+
+
+@media (width <= 1224px) {
+    
+    .playerContainer {
+
+        & .player {
+            gap: 1.88rem;
+        }
+    }
+
+}
+
+@media (width <= 768px) {
+    
+    .playerContainer {
+
+        & .player {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            flex-direction: column;
+        }
+    }
+}

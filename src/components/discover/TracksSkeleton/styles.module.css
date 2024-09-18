@@ -1,0 +1,88 @@
+.skeletonList {
+    display: grid; 
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, auto);
+    gap: 2rem;
+    max-width: 100%;
+}
+
+.skeleton {
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+    padding-bottom: 100%;
+    border-radius: var(--track-btn-border-radius);
+    position: relative;
+    background: #efefef;
+
+    & .skeletonInfo {
+        position: absolute;
+        width: 100%;
+        padding: 1.5rem;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        & :is(
+            .skeletonInfoTitle,
+            .skeletonInfoText1,
+            .skeletonInfoText2
+        ){
+            animation: skeleton 1s infinite linear;
+            background: #dddddd;
+            border-radius: var(--track-btn-border-radius);
+            background-image: linear-gradient(90deg, #dddddd 0px, #eeeeee 100px, #dddddd 200px);
+            background-size: 31.25rem;
+
+        }
+
+        & .skeletonInfoTitle {
+            width: 70%;
+            height: 1.5rem;
+        }
+
+        & .skeletonInfoText1 {
+            width: 60%;
+            height: 1.2rem;
+        }
+
+        & .skeletonInfoText2 {
+            width: 50%;
+            height: 1.2rem;
+        }
+    
+    }
+
+}
+
+@keyframes skeleton {
+    0% {
+        background-position: -12.5rem;
+    }
+    50% {
+        background-position: 19.5rem;
+    }
+    100% {
+        background-position: 19.5rem;
+    }
+}
+
+@media (width <= 1024px) {
+    .skeletonList {
+        grid-template-columns: repeat(3, auto);
+    }
+    
+}
+
+@media (width <= 768px) {
+    .skeletonList {
+        grid-template-columns: repeat(2, auto);
+    }
+    
+}
+
+@media (width <= 481px) {
+    .skeletonList {
+        grid-template-columns: repeat(1, auto);
+    }
+}

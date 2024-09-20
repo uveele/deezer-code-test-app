@@ -12,7 +12,7 @@ The selected template was ```react-swc-ts```
 
 ## Configuration
 
-As you can see in the ```.env.template``` file, the following environment variables are needed
+Copy the ```.env.template``` file and rename it to ```.env```. Assign the following environment variables: 
 
 1. VITE_DEEZER_API_URL
 
@@ -24,7 +24,7 @@ As you can see in the ```.env.template``` file, the following environment variab
 
 3. VITE_DEEZER_API_KEY
 
-    Your personal API key
+    Your personal API key. You can get one at "https://rapidapi.com/deezerdevs/api/deezer-1/"
 
 4. VITE_BACKEND_URL
 

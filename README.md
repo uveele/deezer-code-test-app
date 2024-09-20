@@ -35,6 +35,8 @@ Copy the ```.env.template``` file and rename it to ```.env```. Assign the follow
 
 ## Installation
 
+IMPORTANT: Before launching this application, you need to launch the backend application
+
 ```
 npm install
 npm run dev
